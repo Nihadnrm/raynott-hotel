@@ -59,14 +59,16 @@ const HomePage = () => {
       </section>
 
       {/* SEARCH BAR */}
-      <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-xl p-6 -mt-12 relative z-10 border">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+         {/* SEARCH BAR */}
+      <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-2xl p-8 -mt-16 relative z-10 border">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
 
           <select
-            className="w-full border rounded-lg px-4 py-3 text-gray-600"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
             onChange={(e) => setCountry(e.target.value)}
+            defaultValue=""
           >
-            <option disabled selected>Select country</option>
+            <option value="" disabled>Select country</option>
             <option>India</option>
             <option>Dubai</option>
             <option>maldives</option>
@@ -76,24 +78,25 @@ const HomePage = () => {
           <input
             type="text"
             placeholder="Enter destination"
-            className="border rounded-lg px-4 py-3"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
             onChange={(e) => setLocationText(e.target.value)}
           />
 
           <input
             type="date"
-            className="border rounded-lg px-4 py-3"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
             onChange={(e) => setDate(e.target.value)}
           />
 
           <button
             onClick={handleSearch}
-            className="bg-indigo-600 text-white font-semibold rounded-lg px-4 py-3 hover:bg-indigo-700 transition"
+            className="w-full bg-indigo-600 text-white font-semibold rounded-lg px-4 py-3 hover:bg-indigo-700 transition shadow-lg hover:shadow-xl"
           >
             Search
           </button>
         </div>
       </div>
+
 
       {/* POPULAR DESTINATIONS */}
       <section className="max-w-7xl mx-auto px-6 py-16">
