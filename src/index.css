@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-slideUp {
+  animation: slideUp 0.9s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.animate-fadeIn {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0px); }
+}
+.animate-floatSlow {
+  animation: floatSlow 6s infinite ease-in-out;
+}
+
+@keyframes floatSlow2 {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(18px); }
+  100% { transform: translateY(0px); }
+}
+.animate-floatSlow2 {
+  animation: floatSlow2 6s infinite ease-in-out;
+}
+
+@keyframes bounceSlow {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+.animate-bounceSlow {
+  animation: bounceSlow 2.5s infinite;
+}
